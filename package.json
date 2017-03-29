@@ -1,0 +1,29 @@
+{
+  "name": "express-pretty-error",
+  "version": "1.0.0-alpha.0",
+  "description": "Express compatible middleware for pretty errors in html, json, raw text, css and terminal contexts with stack traces included!",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stipsan/express-pretty-error.git"
+  },
+  "keywords": [
+    "express",
+    "connect",
+    "http",
+    "pretty",
+    "error",
+    "pretty-error",
+    "middleware",
+    "error-handler"
+  ],
+  "author": "Stian Didriksen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stipsan/express-pretty-error/issues"
+  },
+  "homepage": "https://github.com/stipsan/express-pretty-error#readme"
+}
