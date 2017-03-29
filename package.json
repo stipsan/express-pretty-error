@@ -2,9 +2,17 @@
   "name": "express-pretty-error",
   "version": "1.0.0-alpha.0",
   "description": "Express compatible middleware for pretty errors in html, json, raw text, css and terminal contexts with stack traces included!",
-  "main": "lib/index.js",
+  "main": "./dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "rm -rf dist && yarn build",
+    "postpublish": "gh-release",
+    "postversion": "git add package.json && git commit -m \"chore(package): update version\"",
+    "build": "babel src --ignore __tests__ --out-dir dist",
+    "test": "jest",
+    "test:watch": "yarn test -- --watch",
+    "coverage": "yarn test -- --coverage",
+    "lint": "eslint .",
+    "coveralls": "coveralls < .coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -25,5 +33,13 @@
   "bugs": {
     "url": "https://github.com/stipsan/express-pretty-error/issues"
   },
-  "homepage": "https://github.com/stipsan/express-pretty-error#readme"
+  "homepage": "https://github.com/stipsan/express-pretty-error#readme",
+  "dependencies": {
+    "accepts": "^1.3.3",
+    "cssesc": "^1.0.0",
+    "print-error": "^0.1.11"
+  },
+  "devDependencies": {
+    "gh-release": "^2.2.1"
+  }
 }

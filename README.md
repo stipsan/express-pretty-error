@@ -6,3 +6,9 @@
 
 [![NPM](https://nodei.co/npm/express-pretty-error.png?downloadRank=true)](https://www.npmjs.com/package/express-pretty-error)
 [![NPM](https://nodei.co/npm-dl/express-pretty-error.png?months=3&height=2)](https://nodei.co/npm/express-pretty-error/)
+
+## Installation
+
+```bash
+  $ yarn add pretty-error-middleware
+```
