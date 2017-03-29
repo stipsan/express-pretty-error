@@ -1,6 +1,6 @@
 {
   "name": "express-pretty-error",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Express compatible middleware for pretty errors in html, json, raw text, css and terminal contexts with stack traces included!",
   "main": "./dist",
   "scripts": {
