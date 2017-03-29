@@ -1,4 +1,4 @@
-# pretty-error-middleware
+# express-pretty-error
 
 [![Build Status](https://travis-ci.org/stipsan/express-pretty-error.svg?branch=master)](https://travis-ci.org/stipsan/express-pretty-error)
 [![Coverage Status](https://coveralls.io/repos/github/stipsan/express-pretty-error/badge.svg)](https://coveralls.io/github/stipsan/express-pretty-error)
@@ -10,5 +10,5 @@
 ## Installation
 
 ```bash
-  $ yarn add pretty-error-middleware
+  $ yarn add express-pretty-error
 ```
