@@ -45,7 +45,6 @@ module.exports = function(){
     // Security header for content sniffing
     res.setHeader('X-Content-Type-Options', 'nosniff')
 
-    res.setHeader('X-Content-Type-Parsed', type)
     // html
     if (type === 'html') {
       const body = `<html>
@@ -67,13 +66,18 @@ module.exports = function(){
       res.end(json)
     // plain text
     } else if (type === 'css') {
+      let formattedError = text(err)
+      if(!formattedError) {
+        formattedError = err.toString() + ' in ' + err.filename + ' ' + err.line + ':' + err.column
+      }
+
       const cssesc = require('cssesc')
       const body = `
         body * {
           display: none!important;
         }
         body::before {
-          content: '${cssesc(text(err))}';
+          content: '${ cssesc(formattedError) }';
           display: block;
           white-space: pre;
         }
